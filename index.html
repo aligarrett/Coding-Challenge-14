@@ -19,8 +19,10 @@
         .container {
             padding: 1rem;
         }
-        .ticket-list {
+        .ticket {
             margin-top: 1rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 1rem;
         }
         .error-message {
             color: red;
@@ -36,8 +38,13 @@
     </header>
 
     <div class="container">
-        <div id="errorMessage" class="error-message">Error: Could not fetch tickets.</div>
-        <div id="ticketList" class="ticket-list">
+        <div id="loading-indicator" style="display: none;">Loading...</div>
+        <div id="error-message" class="error-message">Error: Could not fetch tickets.</div>
+        <div id="ticket-container" class="ticket-list">
             <!-- Tickets will be dynamically inserted here -->
         </div>
     </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

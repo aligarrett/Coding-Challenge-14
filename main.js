@@ -3,6 +3,10 @@
 async function fetchTickets() {
     const ticketContainer = document.getElementById("ticket-container");
     const errorMessage = document.getElementById("error-message");
+    const loadingIndicator = document.getElementById("loading-indicator"); // Task 4
+
+    // Show loading indicator at the start
+    loadingIndicator.style.display = "block";
 
     try {
         // Fetch data from the Unresolved Tickets API
@@ -40,6 +44,9 @@ async function fetchTickets() {
         // Display custom error message
         errorMessage.textContent = error.message;
         errorMessage.style.display = "block";
+    } finally {
+        // Ensure the loading indicator is hidden
+        loadingIndicator.style.display = "none";
     }
 }
 
