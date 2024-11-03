@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support Tickets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            padding: 1rem;
+        }
+        .ticket-list {
+            margin-top: 1rem;
+        }
+        .error-message {
+            color: red;
+            font-weight: bold;
+            display: none; /* Hidden by default */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Customer Support Tickets</h1>
+    </header>
+
+    <div class="container">
+        <div id="errorMessage" class="error-message">Error: Could not fetch tickets.</div>
+        <div id="ticketList" class="ticket-list">
+            <!-- Tickets will be dynamically inserted here -->
+        </div>
+    </div>
